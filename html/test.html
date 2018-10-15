@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scale</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /*transform: scale(1.5);*/
+            margin-top: 100px;
+        }
+        .scale{
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+<div id="test" style=" background: #ccc"></div>
+<script type="text/javascript">
+    autoheight();
+    function autoheight() {
+        //函数：获取尺寸
+        //获取浏览器窗口高度
+        var imgBoxHeight = 0;
+        if (window.innerHeight) {
+            imgBoxHeight = window.innerHeight;
+        }
+        else if ((document.body) && (document.body.clientHeight)) {
+            imgBoxHeight = document.body.clientHeight;
+        }
+        //通过深入Document内部对body进行检测，获取浏览器窗口高度
+        if (document.documentElement && document.documentElement.clientHeight) {
+            imgBoxHeight = document.documentElement.clientHeight;
+        }
+        //DIV高度为浏览器窗口的高度
+        document.getElementById("test").style.height = imgBoxHeight + "px";
+        console.log(imgBoxHeight);
+    }
+    //浏览器窗口发生变化时同时变化DIV高度
+    window.onresize = autoheight;
+</script>
+</body>
+</html>
