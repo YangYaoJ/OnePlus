@@ -20,6 +20,6 @@ $('.btn-remove').click(function(){
 
 //my-join我要参加点击事件
 $('.my-join').click(function () {
-   window.location.href='http://localhost:63342/%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA/html/ShotOn.html?_ijt=5fcm129r4q4e2acm0dbrsdup3f'
+   window.location.href='html/ShotOn.html'
 });
 
